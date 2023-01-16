@@ -10,3 +10,7 @@ class Book(models.Model):
     category_Id = models.ForeignKey(Category,on_delete=models.PROTECT,default=None)
     price = models.IntegerField(null=False)
 
+class Logger(models.Model):
+    first_name = models.CharField(max_length=200)
+    last_name = models.CharField(max_length=200)
+    time_log = models.TimeField()
